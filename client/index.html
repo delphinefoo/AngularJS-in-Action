@@ -1,0 +1,43 @@
+<html ng-app="Angello">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>AnDello</title>
+
+		<link rel="stylesheet" href="assets/css/normalize.css">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="assets/css/angello.css">
+		<link rel="stylesheet" href="assets/css/animate.css">
+	</head>
+
+	<body ng-controller="MainCtrl as main">
+		<div class="navbar navbar-fixed-top navbar-default">
+			<div class="navbar-header pull-left">
+				<a class="logo navbar-brand" href="#/">
+					<img src="assets/img/angello.png">
+				</a>
+			</div>
+			<div class="btn-group pull-right" ng-show="main.currentUser">
+				<a class="btn btn-danger" href="#/">
+					<span class="glyphicon glyphicon-home"></span>
+				</a>
+				<a class="btn btn-danger" href="#/users">
+					<span class="glyphicon glyphicon-user"></span>
+				</a>
+				<a class="btn btn-danger" href="#/dashboard">
+					<span class="glyphicon glyphicon-signal"></span>
+				</a>
+			</div>
+		</div>
+
+		<div ng-view=""></div>
+
+		<div class="modal"></div>
+		
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js">
+		<script src="vendor/head.load.min.js"></script>
+    <script src="assets/js/boot.js"></script>
+	</body>
+</html>
